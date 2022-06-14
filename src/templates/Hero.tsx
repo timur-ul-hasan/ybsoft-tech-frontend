@@ -28,7 +28,7 @@ const Hero = () => (
         title={
           <>
             {'HI\n'}
-            <span className="text-primary-500">WE ARE PROXET</span>
+            <span className="text-primary-500">WE ARE YBTECH</span>
           </>
         }
         description="AND WE ARE ABOUT: CLEAN CODE, SMART CODE, AND SMART PEOPLE."
