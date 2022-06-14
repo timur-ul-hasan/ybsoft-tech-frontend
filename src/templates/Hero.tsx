@@ -23,16 +23,15 @@ const Hero = () => (
         </li>
       </NavbarTwoColumns>
     </Section>
-
     <Section yPadding="pt-20 pb-32">
       <HeroOneButton
         title={
           <>
-            {'We are Developers\n'}
-            <span className="text-primary-500">We Develop Applications</span>
+            {'HI\n'}
+            <span className="text-primary-500">WE ARE PROXET</span>
           </>
         }
-        description="You think you can build a website? We can build a website that is easy to use and easy to maintain."
+        description="AND WE ARE ABOUT: CLEAN CODE, SMART CODE, AND SMART PEOPLE."
         button={
           <Link href="https://creativedesignsguru.com/category/nextjs/">
             <a>
