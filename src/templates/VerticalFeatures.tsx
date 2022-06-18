@@ -3,25 +3,25 @@ import { Section } from '../layout/Section';
 
 const VerticalFeatures = () => (
   <Section
-    title="Your title here"
-    description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus malesuada nisi tellus, non imperdiet nisi tempor at."
+    title="Artificial Intelligence"
+    description="We are a team of developers who love to build great products."
   >
     <VerticalFeatureRow
-      title="Your title here"
-      description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse bibendum, nunc non posuere consectetur, justo erat semper enim, non hendrerit dui odio id enim."
+      title="Databases"
+      description="At YB Tech we love to build databases. We use PostgreSQL, MySQL, and MongoDB."
       image="/assets/images/feature.svg"
       imageAlt="First feature alt text"
     />
     <VerticalFeatureRow
-      title="Your title here"
-      description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse bibendum, nunc non posuere consectetur, justo erat semper enim, non hendrerit dui odio id enim."
+      title="Web Development [Frontend]"
+      description="We love to build web applications. We use React, Next.js, and Node.js."
       image="/assets/images/feature2.svg"
       imageAlt="Second feature alt text"
       reverse
     />
     <VerticalFeatureRow
-      title="Your title here"
-      description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse bibendum, nunc non posuere consectetur, justo erat semper enim, non hendrerit dui odio id enim."
+      title="Web Development [Backend]"
+      description="We love to build web applications. We use Django, Laravel and Ruby on Rails."
       image="/assets/images/feature3.svg"
       imageAlt="Third feature alt text"
     />
