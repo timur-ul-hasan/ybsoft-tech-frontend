@@ -23,7 +23,14 @@ const FormikForm = () => {
               headers: {
                 'Content-Type': 'application/json',
               },
-              body: JSON.stringify({ data: values }),
+              body: JSON.stringify({
+                data: {
+                  Name: values.name,
+                  Email: values.email,
+                  Phone: values.phone,
+                  Message: values.message,
+                },
+              }),
             }).then(() => {
               console.log('success');
             });
@@ -63,8 +70,8 @@ const FormikForm = () => {
                     <div className="mt-1 flex rounded-md shadow-sm">
                       <Field
                         type="text"
-                        name="name"
-                        id="name"
+                        name="email"
+                        id="email"
                         className="focus:ring-indigo-500 focus:border-indigo-500 flex-1 block w-full rounded-none rounded-r-md sm:text-xl border-gray-300"
                         placeholder="Name"
                       />
@@ -100,17 +107,16 @@ const FormikForm = () => {
                     Message
                   </label>
                   <div className="mt-1">
-                    <textarea
+                    <Field
+                      type="text"
                       id="message"
                       name="message"
+                      component="textarea"
                       rows={8}
                       className="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 mt-1 block w-full sm:text-xl border border-gray-300 rounded-md"
                       placeholder="Your message..."
-                    ></textarea>
+                    />
                   </div>
-                  <p className="mt-2 text-xl text-gray-500">
-                    Brief description for your profile. URLs are hyperlinked.
-                  </p>
                 </div>
               </div>
               <div className="px-4 py-3 bg-gray-50 text-right sm:px-6">
