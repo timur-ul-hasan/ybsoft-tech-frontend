@@ -1,5 +1,4 @@
 import { Formik, Field, Form } from 'formik';
-import React from 'React';
 
 import { AppConfig } from '../utils/AppConfig';
 

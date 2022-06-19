@@ -1,5 +1,3 @@
-import React from 'React';
-
 const FormikForm = () => {
   return (
     <div className="md:grid md:grid-cols-3 md:gap-6 max-w-5xl m-auto mt-24 mb-24">
