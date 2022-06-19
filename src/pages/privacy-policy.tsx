@@ -7,7 +7,7 @@ const Base = () => (
   <div className="antialiased text-gray-600">
     <Meta title={AppConfig.title} description={AppConfig.description} />
     <Navigation />
-    <div className="mw-64" yPadding="py-6">
+    <div className="mw-64">
       <p>
         <strong>Privacy Policy for My Website</strong>
       </p>
