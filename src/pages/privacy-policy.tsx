@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import { Meta } from '../layout/Meta';
 import { Footer } from '../templates/Footer';
 import { Navigation } from '../templates/Navigation';
@@ -144,7 +145,7 @@ const Base = () => (
         their visit to www.website.com and other sites on the internet. However,
         visitors may choose to decline the use of DART cookies by visiting the
         Google ad and content network Privacy Policy at the following URL
-        &ndash;{' '}
+        &ndash;
         <a href="https://policies.google.com/technologies/ads">
           <span className="s1">
             https://policies.google.com/technologies/ads
