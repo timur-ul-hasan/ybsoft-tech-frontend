@@ -15,6 +15,10 @@
     "b-dev": "next dev -p 4000"
   },
   "dependencies": {
+    "@emotion/react": "^11.9.3",
+    "@emotion/styled": "^11.9.3",
+    "@mui/material": "^5.8.5",
+    "@mui/types": "^7.1.4",
     "@tailwindcss/forms": "^0.5.2",
     "classnames": "^2.3.1",
     "formik": "^2.2.9",
@@ -22,6 +26,7 @@
     "next-seo": "^4.29.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-i18next": "^11.17.2",
     "styled-jsx-plugin-postcss": "^4.0.1"
   },
   "devDependencies": {
