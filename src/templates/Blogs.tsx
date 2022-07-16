@@ -14,8 +14,8 @@ import {
   styled,
   useTheme,
 } from '@mui/material';
+import Link from 'next/link';
 import { useTranslation } from 'react-i18next';
-import Link from 'src/components/Link';
 
 const BoxComposed = styled(Box)(
   () => `
