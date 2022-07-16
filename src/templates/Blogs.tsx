@@ -85,7 +85,6 @@ const LabelWarning = styled(Box)(
     line-height: 23px;
     height: 22px;
     padding: ${theme.spacing(0, 2)};
-    border-radius: ${theme.general.borderRadiusSm};
   `
 );
 
@@ -100,7 +99,6 @@ const LabelError = styled(Box)(
     line-height: 23px;
     height: 22px;
     padding: ${theme.spacing(0, 2)};
-    border-radius: ${theme.general.borderRadiusSm};
   `
 );
 
@@ -115,7 +113,6 @@ const LabelSuccess = styled(Box)(
     line-height: 23px;
     height: 22px;
     padding: ${theme.spacing(0, 2)};
-    border-radius: ${theme.general.borderRadiusSm};
   `
 );
 
@@ -148,30 +145,14 @@ function Block7() {
   const theme = useTheme();
 
   return (
-    <Card
-      sx={{
-        '&:hover': {
-          boxShadow: `0 2rem 8rem 0 ${alpha(
-            theme.colors.alpha.black[100],
-            0.05
-          )}, 
-                0 0.6rem 1.6rem ${alpha(theme.colors.alpha.black[100], 0.15)}, 
-                0 0.2rem 0.2rem ${alpha(theme.colors.alpha.black[100], 0.1)}`,
-        },
-      }}
-    >
-      <BoxComposed
-        sx={{
-          background: `${theme.colors.gradients.blue1}`,
-        }}
-      >
+    <Card>
+      <BoxComposed>
         <CardActions>
           <LabelSuccess>{t('New')}</LabelSuccess>
         </CardActions>
         <BoxComposedBg
           sx={{
             opacity: 0.1,
-            background: `${theme.colors.gradients.blue3}`,
           }}
         />
         <BoxComposedImage
@@ -217,7 +198,6 @@ function Block7() {
             sx={{
               fontSize: `${theme.typography.pxToRem(12)}`,
               textTransform: 'uppercase',
-              boxShadow: `${theme.colors.shadows.error}`,
             }}
           >
             {t('Contact us')}
@@ -242,26 +222,11 @@ function Block7() {
                       sx={{
                         width: 50,
                         height: 50,
-                        boxShadow: `0 .113rem .5rem ${theme.colors.alpha.black[10]}, 0 .126rem .225rem ${theme.colors.alpha.black[30]}`,
                       }}
                       src="/static/images/avatars/1.jpg"
                     />
                     <Box ml={1.5}>
-                      <Link
-                        href="#"
-                        color="text.primary"
-                        underline="none"
-                        sx={{
-                          transition: `${theme.transitions.create(['color'])}`,
-
-                          '&:hover': {
-                            color: `${theme.colors.primary.main}`,
-                          },
-                        }}
-                        variant="h5"
-                      >
-                        Shanelle Wynn
-                      </Link>
+                      <Link href="#">Shanelle Wynn</Link>
                       <Typography variant="subtitle2">
                         UI Engineer, Apple Inc.
                       </Typography>
@@ -277,14 +242,8 @@ function Block7() {
                     size="small"
                     color="primary"
                     sx={{
-                      backgroundColor: `${theme.colors.primary.lighter}`,
                       fontWeight: 'normal',
-                      '&:hover': {
-                        backgroundColor: `${theme.colors.primary.main}`,
-                        color: `${theme.palette.getContrastText(
-                          theme.colors.primary.main
-                        )}`,
-                      },
+                      '&:hover': {},
                     }}
                   >
                     {t('Chat')}
@@ -298,26 +257,11 @@ function Block7() {
                       sx={{
                         width: 50,
                         height: 50,
-                        boxShadow: `0 .113rem .5rem ${theme.colors.alpha.black[10]}, 0 .126rem .225rem ${theme.colors.alpha.black[30]}`,
                       }}
                       src="/static/images/avatars/2.jpg"
                     />
                     <Box ml={1.5}>
-                      <Link
-                        href="#"
-                        color="text.primary"
-                        underline="none"
-                        sx={{
-                          transition: `${theme.transitions.create(['color'])}`,
-
-                          '&:hover': {
-                            color: `${theme.colors.primary.main}`,
-                          },
-                        }}
-                        variant="h5"
-                      >
-                        Beck Simpson
-                      </Link>
+                      <Link href="#">Beck Simpson</Link>
                       <Typography variant="subtitle2">
                         Frontend Developer
                       </Typography>
@@ -328,21 +272,7 @@ function Block7() {
                   <LabelSuccess>{t('Completed')}</LabelSuccess>
                 </TableCell>
                 <TableCell align="right">
-                  <Button
-                    variant="text"
-                    size="small"
-                    color="primary"
-                    sx={{
-                      backgroundColor: `${theme.colors.primary.lighter}`,
-                      fontWeight: 'normal',
-                      '&:hover': {
-                        backgroundColor: `${theme.colors.primary.main}`,
-                        color: `${theme.palette.getContrastText(
-                          theme.colors.primary.main
-                        )}`,
-                      },
-                    }}
-                  >
+                  <Button variant="text" size="small" color="primary">
                     {t('Chat')}
                   </Button>
                 </TableCell>
@@ -354,26 +284,11 @@ function Block7() {
                       sx={{
                         width: 50,
                         height: 50,
-                        boxShadow: `0 .113rem .5rem ${theme.colors.alpha.black[10]}, 0 .126rem .225rem ${theme.colors.alpha.black[30]}`,
                       }}
                       src="/static/images/avatars/2.jpg"
                     />
                     <Box ml={1.5}>
-                      <Link
-                        href="#"
-                        color="text.primary"
-                        underline="none"
-                        sx={{
-                          transition: `${theme.transitions.create(['color'])}`,
-
-                          '&:hover': {
-                            color: `${theme.colors.primary.main}`,
-                          },
-                        }}
-                        variant="h5"
-                      >
-                        Regan Norris
-                      </Link>
+                      <Link href="#">Regan Norris</Link>
                       <Typography variant="subtitle2">
                         Senior Project Manager
                       </Typography>
@@ -384,21 +299,7 @@ function Block7() {
                   <LabelError>{t('Declined')}</LabelError>
                 </TableCell>
                 <TableCell align="right">
-                  <Button
-                    variant="text"
-                    size="small"
-                    color="primary"
-                    sx={{
-                      backgroundColor: `${theme.colors.primary.lighter}`,
-                      fontWeight: 'normal',
-                      '&:hover': {
-                        backgroundColor: `${theme.colors.primary.main}`,
-                        color: `${theme.palette.getContrastText(
-                          theme.colors.primary.main
-                        )}`,
-                      },
-                    }}
-                  >
+                  <Button variant="text" size="small" color="primary">
                     {t('Chat')}
                   </Button>
                 </TableCell>
