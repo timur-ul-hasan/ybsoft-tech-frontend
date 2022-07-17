@@ -5,20 +5,23 @@
 @tailwind utilities;
 
 @-moz-keyframes spin {
-    100% {
-        -moz-transform: rotate(360deg);
-    }
+  100% {
+    -moz-transform: rotate(60deg);
+  }
 }
 
 @-webkit-keyframes spin {
-    100% {
-        -webkit-transform: rotate(360deg);
-    }
+  100% {
+    -webkit-transform: rotate(60deg);
+  }
 }
 
 @keyframes spin {
-    100% {
-        -webkit-transform: rotate(360deg);
-        transform: rotate(360deg);
-    }
+  0%, 40% {
+    transform: rotate(0deg);
+  }
+
+  60%, 100% {
+    transform: rotate(60deg);
+  }
 }

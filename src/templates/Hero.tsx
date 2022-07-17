@@ -21,7 +21,7 @@ const StyledImage = styled.img`
   -webkit-animation: spin 4s linear infinite;
   -moz-animation: spin 4s linear infinite;
   -webkit-animation: spin 4s linear infinite;
-  animation: spin 200s linear infinite;
+  animation: spin 6s linear infinite;
 `;
 
 const Hero = () => (
