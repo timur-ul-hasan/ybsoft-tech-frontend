@@ -1,315 +1,67 @@
 import {
-  Box,
-  Card,
-  Typography,
-  alpha,
-  TableHead,
   Button,
-  TableRow,
-  TableCell,
-  TableBody,
-  Avatar,
-  Table,
-  TableContainer,
+  CardActionArea,
+  CardActions,
+  Grid,
+  Paper,
   styled,
-  useTheme,
-} from '@mui/material';
-import Link from 'next/link';
-import { useTranslation } from 'react-i18next';
+  Card,
+  CardContent,
+  CardMedia,
+  Typography,
+} from "@mui/material";
 
-const BoxComposed = styled(Box)(
-  () => `
-    position: relative;
-  `
-);
+import { useTranslation } from "react-i18next";
 
-const BoxComposedContent = styled(Box)(
-  ({ theme }) => `
-    position: relative;
-    z-index: 7;
+const Item = styled(Paper)(({ theme }) => ({
+  backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "#fff",
+  ...theme.typography.body2,
+  padding: theme.spacing(1),
+  textAlign: "center",
+  color: theme.palette.text.secondary,
+}));
 
-    .MuiTypography-root {
-        color: ${theme.palette.primary.contrastText};
-
-        & + .MuiTypography-root {
-            color: ${alpha(theme.palette.primary.contrastText, 0.7)};
-        }
-    }
-    
-  `
-);
-
-const BoxComposedImage = styled(Box)(
-  () => `
-    position: absolute;
-    left: 0;
-    top: 0;
-    z-index: 5;
-    filter: grayscale(80%);
-    background-size: cover;
-    height: 100%;
-    width: 100%;
-    border-radius: inherit;
-  `
-);
-
-const BoxComposedBg = styled(Box)(
-  () => `
-    position: absolute;
-    left: 0;
-    top: 0;
-    z-index: 6;
-    height: 100%;
-    width: 100%;
-    border-radius: inherit;
-  `
-);
-
-const CardActions = styled(Box)(
-  ({ theme }) => `
-    position: absolute;
-    right: ${theme.spacing(2)};
-    bottom: ${theme.spacing(2)};
-    z-index: 7;
-  `
-);
-
-const LabelWarning = styled(Box)(
-  ({ theme }) => `
-    display: inline-block;
-    background: ${theme.palette.warning.main};
-    color: ${theme.palette.warning.contrastText};
-    text-transform: uppercase;
-    font-size: ${theme.typography.pxToRem(10)};
-    font-weight: bold;
-    line-height: 23px;
-    height: 22px;
-    padding: ${theme.spacing(0, 2)};
-  `
-);
-
-const LabelError = styled(Box)(
-  ({ theme }) => `
-    display: inline-block;
-    background: ${theme.palette.error.main};
-    color: ${theme.palette.error.contrastText};
-    text-transform: uppercase;
-    font-size: ${theme.typography.pxToRem(10)};
-    font-weight: bold;
-    line-height: 23px;
-    height: 22px;
-    padding: ${theme.spacing(0, 2)};
-  `
-);
-
-const LabelSuccess = styled(Box)(
-  ({ theme }) => `
-    display: inline-block;
-    background: ${theme.palette.success.main};
-    color: ${theme.palette.success.contrastText};
-    text-transform: uppercase;
-    font-size: ${theme.typography.pxToRem(10)};
-    font-weight: bold;
-    line-height: 23px;
-    height: 22px;
-    padding: ${theme.spacing(0, 2)};
-  `
-);
-
-const TableHeadWrapper = styled(TableHead)(
-  ({ theme }) => `
-      .MuiTableCell-root {
-          text-transform: none;
-          font-weight: normal;
-          font-size: ${theme.typography.pxToRem(16)};
-          padding-top: 0;
-          padding-bottom: ${theme.spacing(1)};
-      }
-
-      .MuiTableRow-root {
-          background: transparent;
-      }
-  `
-);
-
-const TableWrapper = styled(Table)(
-  () => `
-    .MuiTableCell-root {
-        border-bottom: 0;
-    }
-  `
-);
-
-function Block7() {
-  const { t }: { t: any } = useTranslation();
-  const theme = useTheme();
-
+function BlogTemplate() {
   return (
-    <Card>
-      <BoxComposed>
-        <CardActions>
-          <LabelSuccess>{t('New')}</LabelSuccess>
-        </CardActions>
-        <BoxComposedBg
-          sx={{
-            opacity: 0.1,
-          }}
-        />
-        <BoxComposedImage
-          sx={{
-            opacity: 0.3,
-            backgroundImage: 'url("/static/images/placeholders/covers/1.jpg")',
-          }}
-        />
-        <BoxComposedContent
-          sx={{
-            textAlign: 'center',
-          }}
-          py={6}
-        >
-          <Typography
-            sx={{
-              px: { xs: 4, md: 12 },
-              pb: 1.5,
-              lineHeight: 1.5,
-            }}
-            variant="h2"
-          >
-            {t('The Ultimate UI Design System at your fingertips!')}
-          </Typography>
-          <Typography
-            sx={{
-              mb: 2.5,
-              px: { xs: 4, md: 8 },
-              lineHeight: 1.6,
-            }}
-            fontWeight="normal"
-            variant="h4"
-          >
-            {t(
-              'High performance React template built with lots of powerful components across multiple product niches for fast & perfect apps development processes'
-            )}
-            .
-          </Typography>
-          <Button
-            variant="contained"
-            size="large"
-            color="error"
-            sx={{
-              fontSize: `${theme.typography.pxToRem(12)}`,
-              textTransform: 'uppercase',
-            }}
-          >
-            {t('Contact us')}
-          </Button>
-        </BoxComposedContent>
-      </BoxComposed>
-      <Box p={2}>
-        <TableContainer>
-          <TableWrapper>
-            <TableHeadWrapper>
-              <TableRow>
-                <TableCell>{t('Employee')}</TableCell>
-                <TableCell align="center">{t('Status')}</TableCell>
-                <TableCell align="right">{t('Actions')}</TableCell>
-              </TableRow>
-            </TableHeadWrapper>
-            <TableBody>
-              <TableRow hover>
-                <TableCell>
-                  <Box display="flex" alignItems="center">
-                    <Avatar
-                      sx={{
-                        width: 50,
-                        height: 50,
-                      }}
-                      src="/static/images/avatars/1.jpg"
-                    />
-                    <Box ml={1.5}>
-                      <Link href="#">Shanelle Wynn</Link>
-                      <Typography variant="subtitle2">
-                        UI Engineer, Apple Inc.
-                      </Typography>
-                    </Box>
-                  </Box>
-                </TableCell>
-                <TableCell align="center">
-                  <LabelWarning>{t('Pending')}</LabelWarning>
-                </TableCell>
-                <TableCell align="right">
-                  <Button
-                    variant="text"
-                    size="small"
-                    color="primary"
-                    sx={{
-                      fontWeight: 'normal',
-                      '&:hover': {},
-                    }}
-                  >
-                    {t('Chat')}
-                  </Button>
-                </TableCell>
-              </TableRow>
-              <TableRow hover>
-                <TableCell>
-                  <Box display="flex" alignItems="center">
-                    <Avatar
-                      sx={{
-                        width: 50,
-                        height: 50,
-                      }}
-                      src="/static/images/avatars/2.jpg"
-                    />
-                    <Box ml={1.5}>
-                      <Link href="#">Beck Simpson</Link>
-                      <Typography variant="subtitle2">
-                        Frontend Developer
-                      </Typography>
-                    </Box>
-                  </Box>
-                </TableCell>
-                <TableCell align="center">
-                  <LabelSuccess>{t('Completed')}</LabelSuccess>
-                </TableCell>
-                <TableCell align="right">
-                  <Button variant="text" size="small" color="primary">
-                    {t('Chat')}
-                  </Button>
-                </TableCell>
-              </TableRow>
-              <TableRow hover>
-                <TableCell>
-                  <Box display="flex" alignItems="center">
-                    <Avatar
-                      sx={{
-                        width: 50,
-                        height: 50,
-                      }}
-                      src="/static/images/avatars/2.jpg"
-                    />
-                    <Box ml={1.5}>
-                      <Link href="#">Regan Norris</Link>
-                      <Typography variant="subtitle2">
-                        Senior Project Manager
-                      </Typography>
-                    </Box>
-                  </Box>
-                </TableCell>
-                <TableCell align="center">
-                  <LabelError>{t('Declined')}</LabelError>
-                </TableCell>
-                <TableCell align="right">
-                  <Button variant="text" size="small" color="primary">
-                    {t('Chat')}
-                  </Button>
-                </TableCell>
-              </TableRow>
-            </TableBody>
-          </TableWrapper>
-        </TableContainer>
-      </Box>
-    </Card>
+    <Grid
+      container
+      rowSpacing={1}
+      columnSpacing={{ xs: 1, sm: 2, md: 3 }}
+      className="max-w-5xl m-auto"
+    >
+      <Grid item xs={12}>
+        <Typography variant="h1">
+          <h1>Blogs</h1>
+        </Typography>
+      </Grid>
+      <Grid item xs={6}>
+        <Card sx={{ maxWidth: 345 }}>
+          <CardActionArea>
+            <CardMedia
+              component="img"
+              height="140"
+              image="/static/images/cards/contemplative-reptile.jpg"
+              alt="green iguana"
+            />
+            <CardContent>
+              <Typography gutterBottom variant="h5" component="div">
+                Lizard
+              </Typography>
+              <Typography variant="body2" color="text.secondary">
+                Lizards are a widespread group of squamate reptiles, with over
+                6,000 species, ranging across all continents except Antarctica
+              </Typography>
+            </CardContent>
+          </CardActionArea>
+          <CardActions>
+            <Button size="small" color="primary">
+              Share
+            </Button>
+          </CardActions>
+        </Card>
+      </Grid>
+    </Grid>
   );
 }
 
-export default Block7;
+export default BlogTemplate;
