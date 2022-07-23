@@ -17,7 +17,6 @@
     // Configuration for TypeScript files
     {
       "files": ["**/*.ts", "**/*.tsx"],
-      "plugins": ["@typescript-eslint", "unused-imports"],
       "extends": [
         "airbnb-typescript",
         "next/core-web-vitals",
@@ -60,12 +59,6 @@
         "@typescript-eslint/comma-dangle": "off", // Avoid conflict rule between Eslint and Prettier
         "import/prefer-default-export": "off", // Named export is easier to refactor automatically
         "class-methods-use-this": "off", // _document.tsx use render method without `this` keyword
-        "@typescript-eslint/no-unused-vars": "off",
-        "unused-imports/no-unused-imports": "warning",
-        "unused-imports/no-unused-vars": [
-          "warning",
-          { "argsIgnorePattern": "^_" }
-        ]
       }
     }
   ]

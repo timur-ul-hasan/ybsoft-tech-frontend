@@ -3,23 +3,12 @@ import {
   CardActionArea,
   CardActions,
   Grid,
-  Paper,
-  styled,
   Card,
   CardContent,
   CardMedia,
   Typography,
 } from "@mui/material";
 
-import { useTranslation } from "react-i18next";
-
-const Item = styled(Paper)(({ theme }) => ({
-  backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "#fff",
-  ...theme.typography.body2,
-  padding: theme.spacing(1),
-  textAlign: "center",
-  color: theme.palette.text.secondary,
-}));
 
 function BlogTemplate() {
   return (
